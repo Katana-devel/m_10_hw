@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="text-center">Список авторов</h1>
+    <ul class="list-group mt-4">
+        {% for author in authors %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{% url 'add_quotes:author_detail' author.id %}">{{ author.name }}</a>
+            <span>{{ author.bio|truncatewords:10 }}</span>
+        </li>
+        {% empty %}
+        <li class="list-group-item">Нет авторов.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

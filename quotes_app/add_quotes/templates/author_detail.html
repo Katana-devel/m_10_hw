@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="text-center">{{ author.name }}</h1>
+    <p>{{ author.bio }}</p>
+    <a href="{% url 'add_quotes:home' %}" class="btn btn-primary">Вернуться назад</a>
+</div>
+{% endblock %}
