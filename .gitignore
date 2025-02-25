@@ -2,5 +2,5 @@ __pycache__/
 .idea/
 *.pyc
 *.log
-.env
+quotes_app/.env
 venv/
